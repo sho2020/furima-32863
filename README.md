@@ -5,8 +5,9 @@
 | Column                | Type   | Option     |
 | --------------------- | ------ | ---------- |
 | nickname              | string | null:false |
+| email                 | string | null:false |
 | password              | string | null:false |
-| password_confirmation | string | null:false |
+| encrpted_password     | string | null:false |
 | last_name             | string | null:false |
 | first_name            | string | null:false |
 | furigana_last_name    | string | null:false |
@@ -20,12 +21,17 @@
 
 ## items テーブル
 
-| Column    | Type       | Option                         |
-| --------- | ---------- | ------------------------------ |
-| picture   |            |                                |
-| price     | integer    | null: false                    |
-| item_name | string     | null: false                    |
-| user      | references | null: false, foreign_key: true |
+| Column      | Type       | Option                         |
+| ----------- | ---------- | ------------------------------ |
+| name        | string     | null: false                    |
+| category    | string     | null: false                    |
+| condition   | string     | null: false                    |
+| shipping    | string     | null: false                    |
+| region      | string     | null: false                    |
+| period      | string     | null: false                    |
+| price       | integer    | null: false                    |
+| explanation | string     | null: false                    |
+| user        | references | null: false, foreign_key: true |
 
 ### Association
 
@@ -47,13 +53,15 @@
 
 ## destination テーブル
 
-| Column       | Type    | Option                         |
-| ------------ | ------- | ------------------------------ |
-| postal_code  |         |                                |
-| prefecture   | integer | null: false                    |
-| city         | string  | null: false                    |
-| address      | text    | null: false, foreign_key: true |
-| phone_number | integer | null: false                    |
+| Column       | Type       | Option                         |
+| ------------ | ---------- | ------------------------------ |
+| postal_code  |            |                                |
+| prefecture   | integer    | null: false                    |
+| city         | string     | null: false                    |
+| address      | string     | null: false                    |
+| phone_number | string     | null: false                    |
+| building     | string     | null: false                    |
+| purchase     | references | null: false, foreign_key: true |
 
 ### Association
 
