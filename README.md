@@ -29,7 +29,7 @@
 | region_id    | integer    | null: false                    |
 | period_id    | integer    | null: false                    |
 | price        | integer    | null: false                    |
-| explanation  | string     | null: false                    |
+| explanation  | text       | null: false                    |
 | user         | references | null: false, foreign_key: true |
 
 ### Association
