@@ -50,7 +50,7 @@
 - belong_to :item
 - has_one :destination
 
-## destination テーブル
+## destinations テーブル
 
 | Column        | Type       | Option                         |
 | ------------- | ---------- | ------------------------------ |
